@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>GE119 Culture Flashcards</title>
+</head>
+    <body>
+        <div class="header">
+            <h1><i class="fa-solid fa-book"></i> GE119: Understanding Culture</h1>
+            <p>Choose a lesson • Click card to flip • Use arrows to navigate</p>
+        </div>
+
+        <div class="lesson-selector">
+            <button class="lesson-btn active" onclick="selectLesson(1)">Lesson 1: Understanding Culture</button>
+            <button class="lesson-btn" onclick="selectLesson(2)">Lesson 2: Philippine Culture</button>
+            <button class="lesson-btn" onclick="selectLesson(3)">Lesson 3: Pop Culture Theories</button>
+        </div>
+
+        <div class="controls" id="controls">
+            <button class="category-btn active" onclick="filterCategory('all')">All Cards</button>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="card-face card-front">
+                    <h2 id="question"></h2>
+                    <p class="card-hint">Click to reveal answer</p>
+                </div>
+                <div class="card-face card-back">
+                    <p id="answer"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn" onclick="prevCard()" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <span class="counter" id="counter">1 / 1</span>
+            <button class="nav-btn" onclick="nextCard()" id="nextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <button class="shuffle-btn" onclick="shuffleCards()"><i class="fa-solid fa-shuffle"></i> SHUFFLE CARDS</button>
+        </body>
+</html>
